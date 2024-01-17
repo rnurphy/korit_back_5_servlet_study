@@ -42,15 +42,13 @@ public class HttpStudyServlet extends HttpServlet {
     	});
     	
     	System.out.println(paramsMap);
-    	System.out.println(request.getParameter("name"));
     	
     	Map<String, String> paramsMap2 = new HashMap<>();
     	
     	Iterator<String> ir = request.getParameterNames().asIterator();
     	while(ir.hasNext()) {
     		String key = ir.next();
-    		paramsMap2.put(ir.next(), request.getParameter(key));
-    		System.out.println(key);
+    		paramsMap2.put(key, request.getParameter(key));
     	}
     		
     }
