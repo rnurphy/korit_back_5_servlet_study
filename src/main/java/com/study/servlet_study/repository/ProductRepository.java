@@ -22,11 +22,11 @@ public class ProductRepository {
 	}
 	
 	public int saveProduct(Product product) {
-		for (Product p : products) {
-			if (product.getProductName().equals(p.getProductName())) {
-				return 0;
-			}
-		}
+//		for (Product p : products) {
+//			if (product.getProductName().equals(p.getProductName())) {
+//				return 0;
+//			}
+//		}
 		products.add(product);
 		
 		return 1;

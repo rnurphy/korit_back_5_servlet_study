@@ -29,9 +29,8 @@ public class HttpStudyServlet extends HttpServlet {
     // DELETE - Delete(삭제)
     
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-    	
+    	// 1. Map 으로 뽑아오는 방법
     	Map<String, String> paramsMap = new HashMap<>();
-    	
     	request.getParameterMap().forEach((k, v) -> {
     		StringBuilder builder = new StringBuilder();
     		
@@ -43,6 +42,7 @@ public class HttpStudyServlet extends HttpServlet {
     	
     	System.out.println(paramsMap);
     	
+    	// 2. Name 으로 뽑아오는 방법
     	Map<String, String> paramsMap2 = new HashMap<>();
     	
     	Iterator<String> ir = request.getParameterNames().asIterator();
