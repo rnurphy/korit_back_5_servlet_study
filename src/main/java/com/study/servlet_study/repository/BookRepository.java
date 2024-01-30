@@ -150,7 +150,6 @@ public class BookRepository {
 		KeyData.put("bookName", "book_name");
 		KeyData.put("authorName", "author_name");
 		KeyData.put("publisherName", "publisher_name");
-		
 		try {
 			con = pool.getConnection();
 			String sql = "select * from book_view where ? = 1";
